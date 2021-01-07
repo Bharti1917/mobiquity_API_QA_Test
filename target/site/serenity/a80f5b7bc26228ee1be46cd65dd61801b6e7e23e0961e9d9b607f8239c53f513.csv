@@ -1,0 +1,2 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Get posts test","This will validate the response code 200 of get posts API","SUCCESS","2021-01-07T11:03:00.2695329+01:00[Europe/Berlin]","0.0","0.74"

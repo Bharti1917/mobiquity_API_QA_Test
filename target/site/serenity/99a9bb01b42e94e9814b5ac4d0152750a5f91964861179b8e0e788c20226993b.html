@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>This is to validate the format of all emails for each comment</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- JQuery-UI -->
+<link type="text/css" href="jqueryui/1.11.2-start/jquery-ui.min.css" rel="Stylesheet" />
+<script type="text/javascript" src="jqueryui/1.11.2-start/jquery-ui.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<!-- ImgPreview -->
+<script src="scripts/imgpreview.full.jquery.js" type="text/javascript"></script>
+</head>
+
+<body class="results-page">
+
+
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Mobility QA Assignment</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+        <span class="breadcrumbs">
+            <a href="index.html" class="breadcrumbs">Home</a>
+
+            > <a href="d2a2b6f81698ab782d27cddaa5d9b8be1499b92ba98fcec8bb5df8ca65cbaef1.html">Comments Details</a>
+            > <a href="934d8a2913164030114c5542dfd3d5b87e2c81cda9831c4d226132c2e14529df.html">Get Comments Test</a>
+        > This is to validate the format of all emails for each comment
+        </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+        <li >
+            <a href="2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html"><i class="fa fa-comments-o"></i> Stories</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 07-01-2021 11:02</span>
+    <br style="clear:left"/>
+</div>
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                                <div>
+                                    <h3 class="discreet-story-header">
+                                        <i class="fa fa-2x fa-comments-o"></i>
+                                        <span class="story-header-title">Get Comments Test </span>
+                                    </h3>
+
+                                </div>
+
+                        </td>
+                        <td valign="top">
+                                <p class="tag">
+                                    <span class="badge tag-badge" style="background:default;">
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;"
+                                                                      href="fd68789747e6dd3d1fe0c8745b3acb7c8dc418d88a117c9bb7ec6184302a344c.html">INTEGRATION
+                                    (usersfeature)</a>
+                                </span>
+                                </p>
+                                <p class="tag">
+                                    <span class="badge tag-badge" style="background:default;">
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;"
+                                                                      href="db79d4b4ed31b7589b680fea13c2c34c5613057b0081c072dd31b9b39158c059.html">POSITIVE
+                                    (usersfeature)</a>
+                                </span>
+                                </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">
+                                    This is to validate the format of all emails for each comment
+                                        <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+        <div class="story-title">
+            <h3 class="story-header">Scenario Outline</h3>
+
+            <div class="scenario">GET https://jsonplaceholder.typicode.com/users?username=&lt;USERNAME&gt;<br>GET https://jsonplaceholder.typicode.com/posts?userId=9<br>GET https://jsonplaceholder.typicode.com/comments?postId=81<br>GET https://jsonplaceholder.typicode.com/comments?postId=82<br>GET https://jsonplaceholder.typicode.com/comments?postId=83<br>GET https://jsonplaceholder.typicode.com/comments?postId=84<br>GET https://jsonplaceholder.typicode.com/comments?postId=85<br>GET https://jsonplaceholder.typicode.com/comments?postId=86<br>GET https://jsonplaceholder.typicode.com/comments?postId=87<br>GET https://jsonplaceholder.typicode.com/comments?postId=88<br>GET https://jsonplaceholder.typicode.com/comments?postId=89<br>GET https://jsonplaceholder.typicode.com/comments?postId=90</div>
+
+        </div>
+
+    <div id="beforetable"></div>
+
+
+            <h3 class="story-header">Examples:</h3>
+
+
+                <p class="example-tag">
+                </p>
+
+            <div class="example-table test-report">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                            <th>USERNAME</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="test-SUCCESS"><a href="#0">1</a></td>
+                                <td class="test-SUCCESS"><a
+                                            href="#0">Delphine</a>
+                                </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+    <div id="tablecontents">
+        <div>
+            <table class="step-table">
+                <tr class="step-titles">
+                    <th width="65">
+                    </th>
+                    <th class="step-description-column greentext">
+                        Steps
+                    </th>
+
+                    <th width="130" class="greentext">Outcome</th>
+                    <th width="100" class="greentext"><i title="Duration" class="far fa-clock"></i></th>
+                </tr>
+                <tr class="step-table-separator">
+                    <td colspan="5"></td>
+                </tr>
+
+                    <tr class="test-SUCCESS">
+
+                        <td width="50" class="step-icon">
+                            <a name="0"></a>
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
+                                   style="display:block">
+                                    <i class="fa fa-plus-square-o imgstepSection0 success-icon"
+                                       style="margin-left: 20px; float:left; padding-right:5px"></i>
+                                </a>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
+                                   style="display:block;">
+                                    <span class="top-level-step">
+                                                This is to validate the format of all emails for each comment
+                                        </span>
+                                </a>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="top-level-step">SUCCESS</span></td>
+                        <td width="100"><span class="top-level-step">0.01s</span></td>
+                    </tr>
+                        <tr>
+                            <td colspan="5">
+                                <table id="stepSection0" class="step-table-nested" style="display:none;">
+
+                    <tr class="test-SUCCESS">
+
+                        <td width="70" class="step-icon">
+                            <a name="0-0"></a>
+                                <span style="margin-left: 40px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                GET https://jsonplaceholder.typicode.com/users?username=Delphine
+                                        </span>
+                                <span class="evidence">
+                                        <span class="piece-of-evidence">
+                    <span>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                                data-target="#restModal-REST-2">
+                            REST Query
+                        </button>
+                    </span>
+                    <!-- Modal -->
+                    <div class="rest-query-details">
+                        <div class="collapse multi-collapse" id="restModal-REST-2">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4>Response</h4>
+                                        <p>Status code: 200</p>
+                                        <p>Content Type: null</p>
+                                        <h4>Request Headers</h4>
+                                        <pre>Accept=*/*</pre>
+                                        <h4>Content Body</h4>
+                                        <pre></pre>
+                                        <h4>Request Cookies</h4>
+                                        <pre></pre>
+                                        <h4>Response Headers</h4>
+                                        <pre>Date: Thu, 07 Jan 2021 10:02:45 GMT<br>Content-Type: application/json; charset=utf-8<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>Set-Cookie: __cfduid=dece07b89adbf7c77e83a206808163f471610013765; expires=Sat, 06-Feb-21 10:02:45 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax<br>X-Powered-By: Express<br>X-Ratelimit-Limit: 1000<br>X-Ratelimit-Remaining: 999<br>X-Ratelimit-Reset: 1609862279<br>Vary: Origin, Accept-Encoding<br>Access-Control-Allow-Credentials: true<br>Cache-Control: max-age=43200<br>Pragma: no-cache<br>Expires: -1<br>X-Content-Type-Options: nosniff<br>Etag: W/&quot;23d-EKDCRFg7oh6G4KjjoWlynBpL2AY&quot;<br>Via: 1.1 vegur<br>CF-Cache-Status: HIT<br>Age: 8035<br>cf-request-id: 077de587e7000005b7923d5000000001<br>Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;<br>Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report?s=ZbWQhuDC73iiLcy%2FaDRYU9kUY8pZVWVD4SwkpfaZfBAEuZ%2BS4FfkPxyGj3Dee5FMC6PXhs%2BrUqNwWnNgsu7hfFlBCJ1YaJFCvhir7Fvhxg7MXX6z5wrxgeYbhNUr&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>NEL: {&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>Server: cloudflare<br>CF-RAY: 60dcd8530ab005b7-FRA<br>Content-Encoding: gzip</pre>
+                                    <h4>Response Body</h4>
+                                        <pre>[<br>    {<br>        &quot;id&quot;: 9,<br>        &quot;name&quot;: &quot;Glenna Reichert&quot;,<br>        &quot;username&quot;: &quot;Delphine&quot;,<br>        &quot;email&quot;: &quot;Chaim_McDermott@dana.io&quot;,<br>        &quot;address&quot;: {<br>            &quot;street&quot;: &quot;Dayna Park&quot;,<br>            &quot;suite&quot;: &quot;Suite 449&quot;,<br>            &quot;city&quot;: &quot;Bartholomebury&quot;,<br>            &quot;zipcode&quot;: &quot;76495-3109&quot;,<br>            &quot;geo&quot;: {<br>                &quot;lat&quot;: &quot;24.6463&quot;,<br>                &quot;lng&quot;: &quot;-168.8889&quot;<br>            }<br>        },<br>        &quot;phone&quot;: &quot;(775)976-6794 x41206&quot;,<br>        &quot;website&quot;: &quot;conrad.com&quot;,<br>        &quot;company&quot;: {<br>            &quot;name&quot;: &quot;Yost and Sons&quot;,<br>            &quot;catchPhrase&quot;: &quot;Switchable contextually-based project&quot;,<br>            &quot;bs&quot;: &quot;aggregate real-time technologies&quot;<br>        }<br>    }<br>]</pre>
+                                        <h4>Response Cookies</h4>
+                                        <pre>__cfduid=dece07b89adbf7c77e83a206808163f471610013765;Path=/;Domain=.typicode.com;HttpOnly;Expires=2/6/21, 10:02 AM</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        </span>
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">0s</span></td>
+                    </tr>
+                    <tr class="test-SUCCESS">
+
+                        <td width="70" class="step-icon">
+                            <a name="0-1"></a>
+                                <span style="margin-left: 40px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                GET https://jsonplaceholder.typicode.com/posts?userId=9
+                                        </span>
+                                <span class="evidence">
+                                        <span class="piece-of-evidence">
+                    <span>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                                data-target="#restModal-REST-3">
+                            REST Query
+                        </button>
+                    </span>
+                    <!-- Modal -->
+                    <div class="rest-query-details">
+                        <div class="collapse multi-collapse" id="restModal-REST-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4>Response</h4>
+                                        <p>Status code: 200</p>
+                                        <p>Content Type: null</p>
+                                        <h4>Request Headers</h4>
+                                        <pre>Accept=*/*</pre>
+                                        <h4>Content Body</h4>
+                                        <pre></pre>
+                                        <h4>Request Cookies</h4>
+                                        <pre></pre>
+                                        <h4>Response Headers</h4>
+                                        <pre>Date: Thu, 07 Jan 2021 10:02:47 GMT<br>Content-Type: application/json; charset=utf-8<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>Set-Cookie: __cfduid=d8d35b19dd1d5c11e797d6040973ead401610013767; expires=Sat, 06-Feb-21 10:02:47 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax<br>X-Powered-By: Express<br>X-Ratelimit-Limit: 1000<br>X-Ratelimit-Remaining: 993<br>X-Ratelimit-Reset: 1609796821<br>Vary: Origin, Accept-Encoding<br>Access-Control-Allow-Credentials: true<br>Cache-Control: max-age=43200<br>Pragma: no-cache<br>Expires: -1<br>X-Content-Type-Options: nosniff<br>Etag: W/&quot;aa1-7w0ImWAnFGRWG4ZRQUECVBaSqRo&quot;<br>Content-Encoding: gzip<br>Via: 1.1 vegur<br>CF-Cache-Status: HIT<br>Age: 6720<br>cf-request-id: 077de58e4d000031400422c000000001<br>Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;<br>Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report?s=Cak7bmJI1oL8A816FGMYtaNn2fDqkDpli1B%2B8gZ%2Bf0Gu2uIqRnNuriQQhJEBmJTYPpj2%2Bu0HpRIOfRV3Ljb%2BdZKlkiVBa7SjpRPL8zZ2qDMOREYhWIclh%2FFfLpMt&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>NEL: {&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>Server: cloudflare<br>CF-RAY: 60dcd85d4f5b3140-FRA</pre>
+                                    <h4>Response Body</h4>
+                                        <pre>[<br>    {<br>        &quot;userId&quot;: 9,<br>        &quot;id&quot;: 81,<br>        &quot;title&quot;: &quot;tempora rem veritatis voluptas quo dolores vero&quot;,<br>        &quot;body&quot;: &quot;facere qui nesciunt est voluptatum voluptatem nisi\nsequi eligendi necessitatibus ea at rerum itaque\nharum non ratione velit laboriosam quis consequuntur\nex officiis minima doloremque voluptas ut aut&quot;<br>    },<br>    {<br>        &quot;userId&quot;: 9,<br>        &quot;id&quot;: 82,<br>        &quot;title&quot;: &quot;laudantium voluptate suscipit sunt enim enim&quot;,<br>        &quot;body&quot;: &quot;ut libero sit aut totam inventore sunt\nporro sint qui sunt molestiae\nconsequatur cupiditate qui iste ducimus adipisci\ndolor enim assumenda soluta laboriosam amet iste delectus hic&quot;<br>    },<br>    {<br>        &quot;userId&quot;: 9,<br>        &quot;id&quot;: 83,<br>        &quot;title&quot;: &quot;odit et voluptates doloribus alias odio et&quot;,<br>        &quot;body&quot;: &quot;est molestiae facilis quis tempora numquam nihil qui\nvoluptate sapiente consequatur est qui\nnecessitatibus autem aut ipsa aperiam modi dolore numquam\nreprehenderit eius rem quibusdam&quot;<br>    },<br>    {<br>        &quot;userId&quot;: 9,<br>        &quot;id&quot;: 84,<br>        &quot;title&quot;: &quot;optio ipsam molestias necessitatibus occaecati facilis veritatis dolores aut&quot;,<br>        &quot;body&quot;: &quot;sint molestiae magni a et quos\neaque et quasi\nut rerum debitis similique veniam\nrecusandae dignissimos dolor incidunt consequatur odio&quot;<br>    },<br>    {<br>        &quot;userId&quot;: 9,<br>        &quot;id&quot;: 85,<br>        &quot;title&quot;: &quot;dolore veritatis porro provident adipisci blanditiis et sunt&quot;,<br>        &quot;body&quot;: &quot;similique sed nisi voluptas iusto omnis\nmollitia et quo\nassumenda suscipit officia magnam sint sed tempora\nenim provident pariatur praesentium atque animi amet ratione&quot;<br>    },<br>    {<br>        &quot;userId&quot;: 9,<br>        &quot;id&quot;: 86,<br>        &quot;title&quot;: &quot;placeat quia et porro iste&quot;,<br>        &quot;body&quot;: &quot;quasi excepturi consequatur iste autem temporibus sed molestiae beatae\net quaerat et esse ut\nvoluptatem occaecati et vel explicabo autem\nasperiores pariatur deserunt optio&quot;<br>    },<br>    {<br>        &quot;userId&quot;: 9,<br>        &quot;id&quot;: 87,<br>        &quot;title&quot;: &quot;nostrum quis quasi placeat&quot;,<br>        &quot;body&quot;: &quot;eos et molestiae\nnesciunt ut a\ndolores perspiciatis repellendus repellat aliquid\nmagnam sint rem ipsum est&quot;<br>    },<br>    {<br>        &quot;userId&quot;: 9,<br>        &quot;id&quot;: 88,<br>        &quot;title&quot;: &quot;sapiente omnis fugit eos&quot;,<br>        &quot;body&quot;: &quot;consequatur omnis est praesentium\nducimus non iste\nneque hic deserunt\nvoluptatibus veniam cum et rerum sed&quot;<br>    },<br>    {<br>        &quot;userId&quot;: 9,<br>        &quot;id&quot;: 89,<br>        &quot;title&quot;: &quot;sint soluta et vel magnam aut ut sed qui&quot;,<br>        &quot;body&quot;: &quot;repellat aut aperiam totam temporibus autem et\narchitecto magnam ut\nconsequatur qui cupiditate rerum quia soluta dignissimos nihil iure\ntempore quas est&quot;<br>    },<br>    {<br>        &quot;userId&quot;: 9,<br>        &quot;id&quot;: 90,<br>        &quot;title&quot;: &quot;ad iusto omnis odit dolor voluptatibus&quot;,<br>        &quot;body&quot;: &quot;minus omnis soluta quia\nqui sed adipisci voluptates illum ipsam voluptatem\neligendi officia ut in\neos soluta similique molestias praesentium blanditiis&quot;<br>    }<br>]</pre>
+                                        <h4>Response Cookies</h4>
+                                        <pre>__cfduid=d8d35b19dd1d5c11e797d6040973ead401610013767;Path=/;Domain=.typicode.com;HttpOnly;Expires=2/6/21, 10:02 AM</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        </span>
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">0s</span></td>
+                    </tr>
+                    <tr class="test-SUCCESS">
+
+                        <td width="70" class="step-icon">
+                            <a name="0-2"></a>
+                                <span style="margin-left: 40px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                GET https://jsonplaceholder.typicode.com/comments?postId=81
+                                        </span>
+                                <span class="evidence">
+                                        <span class="piece-of-evidence">
+                    <span>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                                data-target="#restModal-REST-4">
+                            REST Query
+                        </button>
+                    </span>
+                    <!-- Modal -->
+                    <div class="rest-query-details">
+                        <div class="collapse multi-collapse" id="restModal-REST-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4>Response</h4>
+                                        <p>Status code: 200</p>
+                                        <p>Content Type: null</p>
+                                        <h4>Request Headers</h4>
+                                        <pre>Accept=*/*</pre>
+                                        <h4>Content Body</h4>
+                                        <pre></pre>
+                                        <h4>Request Cookies</h4>
+                                        <pre></pre>
+                                        <h4>Response Headers</h4>
+                                        <pre>Date: Thu, 07 Jan 2021 10:02:47 GMT<br>Content-Type: application/json; charset=utf-8<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>Set-Cookie: __cfduid=d628e054b179934f003d291a4fbf947951610013767; expires=Sat, 06-Feb-21 10:02:47 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax<br>X-Powered-By: Express<br>X-Ratelimit-Limit: 1000<br>X-Ratelimit-Remaining: 999<br>X-Ratelimit-Reset: 1609966178<br>Vary: Origin, Accept-Encoding<br>Access-Control-Allow-Credentials: true<br>Cache-Control: max-age=43200<br>Pragma: no-cache<br>Expires: -1<br>X-Content-Type-Options: nosniff<br>Etag: W/&quot;69c-knmY+AMmsNR8ocIWFLHcEv5PzuU&quot;<br>Content-Encoding: gzip<br>Via: 1.1 vegur<br>CF-Cache-Status: HIT<br>Age: 18606<br>cf-request-id: 077de58f94000096a4b52f5000000001<br>Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;<br>Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report?s=PiKX4aCS1QEKb1pxRAwavCUQJ7NDejfptNeYDoZVADwsEO9BGrKVghCRJ1ENEUQSmoapjV%2FXTpIrz6SSU%2BfV65cLN0elZtubcDAr4NiCpGeOnTaC3%2F81Uij%2BTUQh&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>NEL: {&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>Server: cloudflare<br>CF-RAY: 60dcd85f5ed596a4-FRA</pre>
+                                    <h4>Response Body</h4>
+                                        <pre>[<br>    {<br>        &quot;postId&quot;: 81,<br>        &quot;id&quot;: 401,<br>        &quot;name&quot;: &quot;cum voluptate sint voluptas veritatis&quot;,<br>        &quot;email&quot;: &quot;Vella.Mayer@colten.net&quot;,<br>        &quot;body&quot;: &quot;sit delectus recusandae qui\net cupiditate sed ipsum culpa et fugiat ab\nillo dignissimos quo est repellat dolorum neque\nvoluptates sed sapiente ab aut rerum enim sint voluptatum&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 81,<br>        &quot;id&quot;: 402,<br>        &quot;name&quot;: &quot;ut eos mollitia eum eius&quot;,<br>        &quot;email&quot;: &quot;Caleb_Dach@kathleen.us&quot;,<br>        &quot;body&quot;: &quot;et nisi fugit totam\nmaiores voluptatibus quis ipsa sunt debitis assumenda\nullam non quasi numquam ut dolores modi recusandae\nut molestias magni est voluptas quibusdam corporis eius&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 81,<br>        &quot;id&quot;: 403,<br>        &quot;name&quot;: &quot;architecto voluptatum eos blanditiis aliquam debitis beatae nesciunt dolorum&quot;,<br>        &quot;email&quot;: &quot;Patience_Bahringer@dameon.biz&quot;,<br>        &quot;body&quot;: &quot;et a et perspiciatis\nautem expedita maiores dignissimos labore minus molestiae enim\net ipsam ea et\nperspiciatis veritatis debitis maxime&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 81,<br>        &quot;id&quot;: 404,<br>        &quot;name&quot;: &quot;officia qui ut explicabo eos fugit&quot;,<br>        &quot;email&quot;: &quot;Destinee.Simonis@jose.tv&quot;,<br>        &quot;body&quot;: &quot;modi est et eveniet facilis explicabo\nvoluptatem saepe quo et sint quas quia corporis\npariatur voluptatibus est iste fugiat delectus animi rerum\ndoloribus est enim&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 81,<br>        &quot;id&quot;: 405,<br>        &quot;name&quot;: &quot;incidunt commodi voluptatem maiores asperiores blanditiis omnis ratione&quot;,<br>        &quot;email&quot;: &quot;Keshaun@brown.biz&quot;,<br>        &quot;body&quot;: &quot;aut aut sit cupiditate maxime praesentium occaecati cumque\nvero sint sit aliquam porro quo consequuntur ut\nnumquam qui maxime voluptas est consequatur ullam\ntenetur commodi qui consectetur distinctio eligendi atque&quot;<br>    }<br>]</pre>
+                                        <h4>Response Cookies</h4>
+                                        <pre>__cfduid=d628e054b179934f003d291a4fbf947951610013767;Path=/;Domain=.typicode.com;HttpOnly;Expires=2/6/21, 10:02 AM</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        </span>
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">0s</span></td>
+                    </tr>
+                    <tr class="test-SUCCESS">
+
+                        <td width="70" class="step-icon">
+                            <a name="0-3"></a>
+                                <span style="margin-left: 40px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                GET https://jsonplaceholder.typicode.com/comments?postId=82
+                                        </span>
+                                <span class="evidence">
+                                        <span class="piece-of-evidence">
+                    <span>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                                data-target="#restModal-REST-5">
+                            REST Query
+                        </button>
+                    </span>
+                    <!-- Modal -->
+                    <div class="rest-query-details">
+                        <div class="collapse multi-collapse" id="restModal-REST-5">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4>Response</h4>
+                                        <p>Status code: 200</p>
+                                        <p>Content Type: null</p>
+                                        <h4>Request Headers</h4>
+                                        <pre>Accept=*/*</pre>
+                                        <h4>Content Body</h4>
+                                        <pre></pre>
+                                        <h4>Request Cookies</h4>
+                                        <pre></pre>
+                                        <h4>Response Headers</h4>
+                                        <pre>Date: Thu, 07 Jan 2021 10:02:48 GMT<br>Content-Type: application/json; charset=utf-8<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>Set-Cookie: __cfduid=d1f56d69cf83e436a2e6b08cc835255931610013768; expires=Sat, 06-Feb-21 10:02:48 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax<br>X-Powered-By: Express<br>X-Ratelimit-Limit: 1000<br>X-Ratelimit-Remaining: 998<br>X-Ratelimit-Reset: 1609966178<br>Vary: Origin, Accept-Encoding<br>Access-Control-Allow-Credentials: true<br>Cache-Control: max-age=43200<br>Pragma: no-cache<br>Expires: -1<br>X-Content-Type-Options: nosniff<br>Etag: W/&quot;69b-6RE4kXn3pbcXMBzi+aN2rVML2jI&quot;<br>Content-Encoding: gzip<br>Via: 1.1 vegur<br>CF-Cache-Status: HIT<br>Age: 18606<br>cf-request-id: 077de592b200001f191ca00000000001<br>Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;<br>Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report?s=9g3Qcliet8qDPD89Pst3DC4DlAsg2NRzbS3ekLB61uWCBn0l5dsln3rYW8WQtTzHn7z35znw7EVm22dU12OO43P70U7pONz5%2BnPeRD72bthRYPIz7KGelXh9dZv4&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>NEL: {&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>Server: cloudflare<br>CF-RAY: 60dcd864397e1f19-FRA</pre>
+                                    <h4>Response Body</h4>
+                                        <pre>[<br>    {<br>        &quot;postId&quot;: 82,<br>        &quot;id&quot;: 406,<br>        &quot;name&quot;: &quot;sint eaque rerum voluptas fugiat quia qui&quot;,<br>        &quot;email&quot;: &quot;Merle.Schultz@marcel.org&quot;,<br>        &quot;body&quot;: &quot;dicta in quam tenetur\nsed molestiae a sit est aut quia autem aut\nnam voluptatem reiciendis corporis voluptatem\nsapiente est id quia explicabo enim tempora asperiores&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 82,<br>        &quot;id&quot;: 407,<br>        &quot;name&quot;: &quot;eius tempora sint reprehenderit&quot;,<br>        &quot;email&quot;: &quot;Malvina_Fay@louie.name&quot;,<br>        &quot;body&quot;: &quot;totam ad quia non vero dolor laudantium sed temporibus\nquia aperiam corrupti sint accusantium eligendi\naliquam rerum voluptatem delectus numquam nihil\nsoluta qui sequi nisi voluptatum eaque voluptas animi ipsam&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 82,<br>        &quot;id&quot;: 408,<br>        &quot;name&quot;: &quot;non excepturi enim est sapiente numquam repudiandae illo&quot;,<br>        &quot;email&quot;: &quot;Domenick_Douglas@gabe.us&quot;,<br>        &quot;body&quot;: &quot;suscipit quidem fugiat consequatur\nquo sequi nesciunt\naliquam ratione possimus\nvoluptatem sit quia repellendus libero excepturi ut temporibus&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 82,<br>        &quot;id&quot;: 409,<br>        &quot;name&quot;: &quot;dicta dolor voluptate vel praesentium&quot;,<br>        &quot;email&quot;: &quot;Isaac@allene.net&quot;,<br>        &quot;body&quot;: &quot;provident illo quis dolor distinctio laborum eius enim\nsuscipit quia error enim eos consequuntur\nest incidunt adipisci beatae tenetur excepturi in labore commodi\nfugiat omnis in et at nam accusamus et&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 82,<br>        &quot;id&quot;: 410,<br>        &quot;name&quot;: &quot;et dolore hic a cupiditate beatae natus iusto soluta&quot;,<br>        &quot;email&quot;: &quot;Marianna.Pacocha@george.net&quot;,<br>        &quot;body&quot;: &quot;in consequatur corporis qui a et magni eum illum\ncorrupti veniam debitis ab iure harum\nenim ut assumenda cum adipisci veritatis et veniam\nrem eius expedita quos corrupti incidunt&quot;<br>    }<br>]</pre>
+                                        <h4>Response Cookies</h4>
+                                        <pre>__cfduid=d1f56d69cf83e436a2e6b08cc835255931610013768;Path=/;Domain=.typicode.com;HttpOnly;Expires=2/6/21, 10:02 AM</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        </span>
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">0s</span></td>
+                    </tr>
+                    <tr class="test-SUCCESS">
+
+                        <td width="70" class="step-icon">
+                            <a name="0-4"></a>
+                                <span style="margin-left: 40px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                GET https://jsonplaceholder.typicode.com/comments?postId=83
+                                        </span>
+                                <span class="evidence">
+                                        <span class="piece-of-evidence">
+                    <span>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                                data-target="#restModal-REST-6">
+                            REST Query
+                        </button>
+                    </span>
+                    <!-- Modal -->
+                    <div class="rest-query-details">
+                        <div class="collapse multi-collapse" id="restModal-REST-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4>Response</h4>
+                                        <p>Status code: 200</p>
+                                        <p>Content Type: null</p>
+                                        <h4>Request Headers</h4>
+                                        <pre>Accept=*/*</pre>
+                                        <h4>Content Body</h4>
+                                        <pre></pre>
+                                        <h4>Request Cookies</h4>
+                                        <pre></pre>
+                                        <h4>Response Headers</h4>
+                                        <pre>Date: Thu, 07 Jan 2021 10:02:48 GMT<br>Content-Type: application/json; charset=utf-8<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>Set-Cookie: __cfduid=d44ccb85f5756d7137a77483767ac2fd81610013768; expires=Sat, 06-Feb-21 10:02:48 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax<br>X-Powered-By: Express<br>X-Ratelimit-Limit: 1000<br>X-Ratelimit-Remaining: 997<br>X-Ratelimit-Reset: 1609966178<br>Vary: Origin, Accept-Encoding<br>Access-Control-Allow-Credentials: true<br>Cache-Control: max-age=43200<br>Pragma: no-cache<br>Expires: -1<br>X-Content-Type-Options: nosniff<br>Etag: W/&quot;620-hNVysEtHeZZkYnUTy04D2NqMlxQ&quot;<br>Content-Encoding: gzip<br>Via: 1.1 vegur<br>CF-Cache-Status: HIT<br>Age: 18606<br>cf-request-id: 077de5938300004a79951b6000000001<br>Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;<br>Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report?s=a9KRK0oUPOT9wlLYNm8Em8MYThz07Eccgd835FEGl4XKws4hbs7P7bha4f7zLmvoqA8NWxDXRj7FH%2FAXXganMNMk5fDbVqSkT6me0FvVaSYfthBNIOaS7Z4SDGxz&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>NEL: {&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>Server: cloudflare<br>CF-RAY: 60dcd8659b274a79-FRA</pre>
+                                    <h4>Response Body</h4>
+                                        <pre>[<br>    {<br>        &quot;postId&quot;: 83,<br>        &quot;id&quot;: 411,<br>        &quot;name&quot;: &quot;hic rem eligendi tenetur ipsum dolore maxime eum&quot;,<br>        &quot;email&quot;: &quot;Sister_Barton@lela.com&quot;,<br>        &quot;body&quot;: &quot;nam voluptatem ex aut voluptatem mollitia sit sapiente\nqui hic ut\nqui natus in iste et magnam dolores et fugit\nea sint ut minima quas eum nobis at reprehenderit&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 83,<br>        &quot;id&quot;: 412,<br>        &quot;name&quot;: &quot;quaerat et quia accusamus provident earum cumque&quot;,<br>        &quot;email&quot;: &quot;Autumn.Lebsack@kasandra.ca&quot;,<br>        &quot;body&quot;: &quot;veniam non culpa aut voluptas rem eum officiis\nmollitia placeat eos cum\nconsequatur eos commodi dolorem\nanimi maiores qui&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 83,<br>        &quot;id&quot;: 413,<br>        &quot;name&quot;: &quot;atque porro quo voluptas&quot;,<br>        &quot;email&quot;: &quot;Irma.OKon@arden.me&quot;,<br>        &quot;body&quot;: &quot;consequatur harum est omnis\nqui recusandae qui voluptatem et distinctio sint eaque\ndolores quo dolorem asperiores\naperiam non quis asperiores aut praesentium&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 83,<br>        &quot;id&quot;: 414,<br>        &quot;name&quot;: &quot;ut qui voluptatem hic maxime&quot;,<br>        &quot;email&quot;: &quot;Alaina_Hammes@carter.info&quot;,<br>        &quot;body&quot;: &quot;molestias debitis magni illo sint officiis ut quia\nsed tenetur dolorem soluta\nvoluptatem fugiat voluptas molestiae magnam fuga\nsimilique enim illum voluptas aspernatur officia&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 83,<br>        &quot;id&quot;: 415,<br>        &quot;name&quot;: &quot;rerum consequatur ut et voluptate harum amet accusantium est&quot;,<br>        &quot;email&quot;: &quot;Alia@addison.org&quot;,<br>        &quot;body&quot;: &quot;iure vitae accusamus tenetur autem ipsa deleniti\nsunt laudantium ut beatae repellendus non eos\nut consequuntur repudiandae ducimus enim\nreiciendis rem explicabo magni dolore&quot;<br>    }<br>]</pre>
+                                        <h4>Response Cookies</h4>
+                                        <pre>__cfduid=d44ccb85f5756d7137a77483767ac2fd81610013768;Path=/;Domain=.typicode.com;HttpOnly;Expires=2/6/21, 10:02 AM</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        </span>
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">0s</span></td>
+                    </tr>
+                    <tr class="test-SUCCESS">
+
+                        <td width="70" class="step-icon">
+                            <a name="0-5"></a>
+                                <span style="margin-left: 40px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                GET https://jsonplaceholder.typicode.com/comments?postId=84
+                                        </span>
+                                <span class="evidence">
+                                        <span class="piece-of-evidence">
+                    <span>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                                data-target="#restModal-REST-7">
+                            REST Query
+                        </button>
+                    </span>
+                    <!-- Modal -->
+                    <div class="rest-query-details">
+                        <div class="collapse multi-collapse" id="restModal-REST-7">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4>Response</h4>
+                                        <p>Status code: 200</p>
+                                        <p>Content Type: null</p>
+                                        <h4>Request Headers</h4>
+                                        <pre>Accept=*/*</pre>
+                                        <h4>Content Body</h4>
+                                        <pre></pre>
+                                        <h4>Request Cookies</h4>
+                                        <pre></pre>
+                                        <h4>Response Headers</h4>
+                                        <pre>Date: Thu, 07 Jan 2021 10:02:48 GMT<br>Content-Type: application/json; charset=utf-8<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>Set-Cookie: __cfduid=d2ff44752a3f7c9989df7867746e039c31610013768; expires=Sat, 06-Feb-21 10:02:48 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax<br>X-Powered-By: Express<br>X-Ratelimit-Limit: 1000<br>X-Ratelimit-Remaining: 996<br>X-Ratelimit-Reset: 1609966178<br>Vary: Origin, Accept-Encoding<br>Access-Control-Allow-Credentials: true<br>Cache-Control: max-age=43200<br>Pragma: no-cache<br>Expires: -1<br>X-Content-Type-Options: nosniff<br>Etag: W/&quot;6b4-pcvsjLdmrIxBAg8M6YyZvTGiC8U&quot;<br>Content-Encoding: gzip<br>Via: 1.1 vegur<br>CF-Cache-Status: HIT<br>Age: 18605<br>cf-request-id: 077de5945e00004a56e21eb000000001<br>Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;<br>Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report?s=1U63cd1B%2FL15W1rZc2Kyrp93YkV1wog5QzdDZJwStvHr55kfO7vvFwj%2BnMBHX5E6yczxyQjIkm3eGG5eY0hrAbLkEwJ0u9ToPoHLYkMWD8xt1sisf4YRiE8%2FRLon&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>NEL: {&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>Server: cloudflare<br>CF-RAY: 60dcd866f8e04a56-FRA</pre>
+                                    <h4>Response Body</h4>
+                                        <pre>[<br>    {<br>        &quot;postId&quot;: 84,<br>        &quot;id&quot;: 416,<br>        &quot;name&quot;: &quot;neque nemo consequatur ea fugit aut esse suscipit dolore&quot;,<br>        &quot;email&quot;: &quot;Aurelie_McKenzie@providenci.biz&quot;,<br>        &quot;body&quot;: &quot;enim velit consequatur excepturi corporis voluptatem nostrum\nnesciunt alias perspiciatis corporis\nneque at eius porro sapiente ratione maiores natus\nfacere molestiae vel explicabo voluptas unde&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 84,<br>        &quot;id&quot;: 417,<br>        &quot;name&quot;: &quot;quia reiciendis nobis minima quia et saepe&quot;,<br>        &quot;email&quot;: &quot;May_Steuber@virgil.net&quot;,<br>        &quot;body&quot;: &quot;et vitae consectetur ut voluptatem\net et eveniet sit\nincidunt tenetur voluptatem\nprovident occaecati exercitationem neque placeat&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 84,<br>        &quot;id&quot;: 418,<br>        &quot;name&quot;: &quot;nesciunt voluptates amet sint et delectus et dolore culpa&quot;,<br>        &quot;email&quot;: &quot;Tessie@emilie.co.uk&quot;,<br>        &quot;body&quot;: &quot;animi est eveniet officiis qui\naperiam dolore occaecati enim aut reiciendis\nanimi ad sint labore blanditiis adipisci voluptatibus eius error\nomnis rerum facere architecto occaecati rerum&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 84,<br>        &quot;id&quot;: 419,<br>        &quot;name&quot;: &quot;omnis voluptate dolorem similique totam&quot;,<br>        &quot;email&quot;: &quot;Priscilla@colten.org&quot;,<br>        &quot;body&quot;: &quot;cum neque recusandae occaecati aliquam reprehenderit ullam saepe veniam\nquasi ea provident tenetur architecto ad\ncupiditate molestiae mollitia molestias debitis eveniet doloremque voluptatem aut\ndolore consequatur nihil facere et&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 84,<br>        &quot;id&quot;: 420,<br>        &quot;name&quot;: &quot;aut recusandae a sit voluptas explicabo nam et&quot;,<br>        &quot;email&quot;: &quot;Aylin@abigale.me&quot;,<br>        &quot;body&quot;: &quot;voluptas cum eum minima rem\ndolorem et nemo repellendus voluptatem sit\nrepudiandae nulla qui recusandae nobis\nblanditiis perspiciatis dolor ipsam reprehenderit odio&quot;<br>    }<br>]</pre>
+                                        <h4>Response Cookies</h4>
+                                        <pre>__cfduid=d2ff44752a3f7c9989df7867746e039c31610013768;Path=/;Domain=.typicode.com;HttpOnly;Expires=2/6/21, 10:02 AM</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        </span>
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">0s</span></td>
+                    </tr>
+                    <tr class="test-SUCCESS">
+
+                        <td width="70" class="step-icon">
+                            <a name="0-6"></a>
+                                <span style="margin-left: 40px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                GET https://jsonplaceholder.typicode.com/comments?postId=85
+                                        </span>
+                                <span class="evidence">
+                                        <span class="piece-of-evidence">
+                    <span>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                                data-target="#restModal-REST-8">
+                            REST Query
+                        </button>
+                    </span>
+                    <!-- Modal -->
+                    <div class="rest-query-details">
+                        <div class="collapse multi-collapse" id="restModal-REST-8">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4>Response</h4>
+                                        <p>Status code: 200</p>
+                                        <p>Content Type: null</p>
+                                        <h4>Request Headers</h4>
+                                        <pre>Accept=*/*</pre>
+                                        <h4>Content Body</h4>
+                                        <pre></pre>
+                                        <h4>Request Cookies</h4>
+                                        <pre></pre>
+                                        <h4>Response Headers</h4>
+                                        <pre>Date: Thu, 07 Jan 2021 10:02:49 GMT<br>Content-Type: application/json; charset=utf-8<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>Set-Cookie: __cfduid=d2c471fdf58d194b7203dbdb22fdb628d1610013769; expires=Sat, 06-Feb-21 10:02:49 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax<br>X-Powered-By: Express<br>X-Ratelimit-Limit: 1000<br>X-Ratelimit-Remaining: 995<br>X-Ratelimit-Reset: 1609966178<br>Vary: Origin, Accept-Encoding<br>Access-Control-Allow-Credentials: true<br>Cache-Control: max-age=43200<br>Pragma: no-cache<br>Expires: -1<br>X-Content-Type-Options: nosniff<br>Etag: W/&quot;5d0-LBTBwmP/I4SZqIr81Sl5cqIHLBM&quot;<br>Content-Encoding: gzip<br>Via: 1.1 vegur<br>CF-Cache-Status: HIT<br>Age: 18606<br>cf-request-id: 077de5956300000746741ca000000001<br>Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;<br>Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report?s=3daKcO3CQgnsfhG9kq%2FRq7ZQZ8qiz3FFEUM4vNJf7sFk54yji4QIz85oo05oLU2WNqPm4bQMW3LWEUfPkZXCQOCCixonO77FjKqStSd7BxD7AwpGbS5hsgw4DLoM&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>NEL: {&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>Server: cloudflare<br>CF-RAY: 60dcd8689f420746-FRA</pre>
+                                    <h4>Response Body</h4>
+                                        <pre>[<br>    {<br>        &quot;postId&quot;: 85,<br>        &quot;id&quot;: 421,<br>        &quot;name&quot;: &quot;non eligendi ipsam provident&quot;,<br>        &quot;email&quot;: &quot;Holden@kenny.io&quot;,<br>        &quot;body&quot;: &quot;voluptate libero corrupti facere totam eaque consequatur nemo\nenim aliquid exercitationem nulla dignissimos illo\nest amet non iure\namet sed dolore non ipsam magni&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 85,<br>        &quot;id&quot;: 422,<br>        &quot;name&quot;: &quot;sit molestiae corporis&quot;,<br>        &quot;email&quot;: &quot;Guillermo_Dare@dorothea.tv&quot;,<br>        &quot;body&quot;: &quot;ducimus ut ut fugiat nesciunt labore\ndeleniti non et aut voluptatum quidem consectetur\nincidunt voluptas accusantium\nquo fuga eaque quisquam et et sapiente aut&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 85,<br>        &quot;id&quot;: 423,<br>        &quot;name&quot;: &quot;assumenda iure a&quot;,<br>        &quot;email&quot;: &quot;Oscar@pearline.com&quot;,<br>        &quot;body&quot;: &quot;rerum laborum voluptas ipsa enim praesentium\nquisquam aliquid perspiciatis eveniet id est est facilis\natque aut facere\nprovident reiciendis libero atque est&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 85,<br>        &quot;id&quot;: 424,<br>        &quot;name&quot;: &quot;molestiae dolores itaque dicta earum eligendi dolores&quot;,<br>        &quot;email&quot;: &quot;Jonathon_Feest@maxime.io&quot;,<br>        &quot;body&quot;: &quot;ducimus hic ea velit\ndolorum soluta voluptas similique rerum\ndolorum sint maxime et vel\nvoluptatum nesciunt et id consequatur earum sed&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 85,<br>        &quot;id&quot;: 425,<br>        &quot;name&quot;: &quot;cumque expedita consequatur qui&quot;,<br>        &quot;email&quot;: &quot;Micah_Wolf@lennie.co.uk&quot;,<br>        &quot;body&quot;: &quot;labore necessitatibus et eum quas id ut\ndoloribus aspernatur nostrum sapiente quo aut quia\neos rerum voluptatem\nnumquam minima soluta velit recusandae ut&quot;<br>    }<br>]</pre>
+                                        <h4>Response Cookies</h4>
+                                        <pre>__cfduid=d2c471fdf58d194b7203dbdb22fdb628d1610013769;Path=/;Domain=.typicode.com;HttpOnly;Expires=2/6/21, 10:02 AM</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        </span>
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">0s</span></td>
+                    </tr>
+                    <tr class="test-SUCCESS">
+
+                        <td width="70" class="step-icon">
+                            <a name="0-7"></a>
+                                <span style="margin-left: 40px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                GET https://jsonplaceholder.typicode.com/comments?postId=86
+                                        </span>
+                                <span class="evidence">
+                                        <span class="piece-of-evidence">
+                    <span>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                                data-target="#restModal-REST-9">
+                            REST Query
+                        </button>
+                    </span>
+                    <!-- Modal -->
+                    <div class="rest-query-details">
+                        <div class="collapse multi-collapse" id="restModal-REST-9">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4>Response</h4>
+                                        <p>Status code: 200</p>
+                                        <p>Content Type: null</p>
+                                        <h4>Request Headers</h4>
+                                        <pre>Accept=*/*</pre>
+                                        <h4>Content Body</h4>
+                                        <pre></pre>
+                                        <h4>Request Cookies</h4>
+                                        <pre></pre>
+                                        <h4>Response Headers</h4>
+                                        <pre>Date: Thu, 07 Jan 2021 10:02:49 GMT<br>Content-Type: application/json; charset=utf-8<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>Set-Cookie: __cfduid=d74ca5b177468722079416d529df4adc21610013769; expires=Sat, 06-Feb-21 10:02:49 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax<br>X-Powered-By: Express<br>X-Ratelimit-Limit: 1000<br>X-Ratelimit-Remaining: 994<br>X-Ratelimit-Reset: 1609966178<br>Vary: Origin, Accept-Encoding<br>Access-Control-Allow-Credentials: true<br>Cache-Control: max-age=43200<br>Pragma: no-cache<br>Expires: -1<br>X-Content-Type-Options: nosniff<br>Etag: W/&quot;61e-KaIWkrkNFpUbVwXOrlJ24bSO1hE&quot;<br>Content-Encoding: gzip<br>Via: 1.1 vegur<br>CF-Cache-Status: HIT<br>Age: 18605<br>cf-request-id: 077de5961f00001f3573b56000000001<br>Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;<br>Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report?s=CmBUeq%2Bbav9%2Bu5EwXp0UZUPjHwVUMpyqcgBAxYJqdtKc2rYedR2lfqeCKmiTjaZwaD7d4C0G2NnmXreyXweVY2KREQPCZZ7z%2FA9C2%2FQPmzb8X93ClxOsuH9jgsQJ&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>NEL: {&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>Server: cloudflare<br>CF-RAY: 60dcd869cbc81f35-FRA</pre>
+                                    <h4>Response Body</h4>
+                                        <pre>[<br>    {<br>        &quot;postId&quot;: 86,<br>        &quot;id&quot;: 426,<br>        &quot;name&quot;: &quot;deleniti tempora non quia et aut&quot;,<br>        &quot;email&quot;: &quot;Shany@daisha.biz&quot;,<br>        &quot;body&quot;: &quot;reiciendis consequatur sunt atque quisquam ut sed iure\nconsequatur laboriosam dicta odio\nquas cumque iure blanditiis ad sed ullam dignissimos\nsunt et exercitationem saepe&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 86,<br>        &quot;id&quot;: 427,<br>        &quot;name&quot;: &quot;delectus illum minus odit&quot;,<br>        &quot;email&quot;: &quot;Drew_Lemke@alexis.net&quot;,<br>        &quot;body&quot;: &quot;in laborum et distinctio nobis maxime\nmaxime id commodi eaque enim amet qui autem\ndebitis et porro eum dicta sapiente iusto nulla sunt\nvoluptate excepturi sint dolorem voluptatem quae explicabo id&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 86,<br>        &quot;id&quot;: 428,<br>        &quot;name&quot;: &quot;voluptas dolores dolor nisi voluptatem ratione rerum&quot;,<br>        &quot;email&quot;: &quot;Karina.Donnelly@liam.com&quot;,<br>        &quot;body&quot;: &quot;excepturi quos omnis aliquam voluptatem iste\nsit unde ab quam ipsa delectus culpa rerum\ncum delectus impedit ut qui modi\nasperiores qui sapiente quia facilis in iure&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 86,<br>        &quot;id&quot;: 429,<br>        &quot;name&quot;: &quot;sed omnis dolore aperiam&quot;,<br>        &quot;email&quot;: &quot;Ahmed_Runolfsson@claire.name&quot;,<br>        &quot;body&quot;: &quot;ab voluptatem nobis unde\ndoloribus aut fugiat\nconsequuntur laboriosam minima inventore sint quis\ndelectus hic et enim sit optio consequuntur&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 86,<br>        &quot;id&quot;: 430,<br>        &quot;name&quot;: &quot;sint ullam alias et at et&quot;,<br>        &quot;email&quot;: &quot;Marilou_Halvorson@kane.io&quot;,<br>        &quot;body&quot;: &quot;debitis ut maiores ut harum sed voluptas\nquae amet eligendi quo quidem odit atque quisquam animi\nut autem est corporis et\nsed tempora facere corrupti magnam&quot;<br>    }<br>]</pre>
+                                        <h4>Response Cookies</h4>
+                                        <pre>__cfduid=d74ca5b177468722079416d529df4adc21610013769;Path=/;Domain=.typicode.com;HttpOnly;Expires=2/6/21, 10:02 AM</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        </span>
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">0s</span></td>
+                    </tr>
+                    <tr class="test-SUCCESS">
+
+                        <td width="70" class="step-icon">
+                            <a name="0-8"></a>
+                                <span style="margin-left: 40px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                GET https://jsonplaceholder.typicode.com/comments?postId=87
+                                        </span>
+                                <span class="evidence">
+                                        <span class="piece-of-evidence">
+                    <span>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                                data-target="#restModal-REST-10">
+                            REST Query
+                        </button>
+                    </span>
+                    <!-- Modal -->
+                    <div class="rest-query-details">
+                        <div class="collapse multi-collapse" id="restModal-REST-10">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4>Response</h4>
+                                        <p>Status code: 200</p>
+                                        <p>Content Type: null</p>
+                                        <h4>Request Headers</h4>
+                                        <pre>Accept=*/*</pre>
+                                        <h4>Content Body</h4>
+                                        <pre></pre>
+                                        <h4>Request Cookies</h4>
+                                        <pre></pre>
+                                        <h4>Response Headers</h4>
+                                        <pre>Date: Thu, 07 Jan 2021 10:02:49 GMT<br>Content-Type: application/json; charset=utf-8<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>Set-Cookie: __cfduid=d0dd44dd2641bc8e1075cda43e734a50b1610013769; expires=Sat, 06-Feb-21 10:02:49 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax<br>X-Powered-By: Express<br>X-Ratelimit-Limit: 1000<br>X-Ratelimit-Remaining: 993<br>X-Ratelimit-Reset: 1609966178<br>Vary: Origin, Accept-Encoding<br>Access-Control-Allow-Credentials: true<br>Cache-Control: max-age=43200<br>Pragma: no-cache<br>Expires: -1<br>X-Content-Type-Options: nosniff<br>Etag: W/&quot;699-bQYcoT2wKdrFt8h6I4OeJqfxEd0&quot;<br>Content-Encoding: gzip<br>Via: 1.1 vegur<br>CF-Cache-Status: HIT<br>Age: 18605<br>cf-request-id: 077de596c30000dfd77222c000000001<br>Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;<br>Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report?s=V3uZQ9gSUAdhchOzo4TPGxVYEgkBDRTW74hOvlUD4m8UlTkdw8FRiY9yFrDM6XGacl5iTlo%2FtU0RgLpbD%2FonwyB8SWxIUlVutQLMAOrcDeUWAUYialsE1t%2Fs4GgT&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>NEL: {&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>Server: cloudflare<br>CF-RAY: 60dcd86ade56dfd7-FRA</pre>
+                                    <h4>Response Body</h4>
+                                        <pre>[<br>    {<br>        &quot;postId&quot;: 87,<br>        &quot;id&quot;: 431,<br>        &quot;name&quot;: &quot;velit incidunt ut accusantium odit maiores quaerat&quot;,<br>        &quot;email&quot;: &quot;Bernie.Schoen@seamus.co.uk&quot;,<br>        &quot;body&quot;: &quot;voluptas minus fugiat vel\nest quos soluta et veniam quia incidunt unde ut\nlaborum odio in eligendi distinctio odit repellat\nnesciunt consequatur blanditiis cupiditate consequatur at et&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 87,<br>        &quot;id&quot;: 432,<br>        &quot;name&quot;: &quot;quod quia nihil nisi perferendis laborum blanditiis tempora eos&quot;,<br>        &quot;email&quot;: &quot;Joesph@darryl.net&quot;,<br>        &quot;body&quot;: &quot;quam et et harum\nplaceat minus neque quae magni inventore saepe deleniti quisquam\nsuscipit dolorum error aliquid dolores\ndignissimos dolorem autem natus iste molestiae est id impedit&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 87,<br>        &quot;id&quot;: 433,<br>        &quot;name&quot;: &quot;qui ea voluptatem reiciendis enim enim nisi aut&quot;,<br>        &quot;email&quot;: &quot;Timmothy.Corwin@augustus.co.uk&quot;,<br>        &quot;body&quot;: &quot;voluptatem minus asperiores quasi\nperspiciatis et aut blanditiis illo deserunt molestiae ab aperiam\nex minima sed omnis at\net repellat aut incidunt&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 87,<br>        &quot;id&quot;: 434,<br>        &quot;name&quot;: &quot;doloremque eligendi quas voluptatem non quos ex&quot;,<br>        &quot;email&quot;: &quot;Julien_OHara@vance.io&quot;,<br>        &quot;body&quot;: &quot;ex eum at culpa quam aliquam\ncupiditate et id dolorem sint quasi et quos et\nomnis et qui minus est quisquam non qui rerum\nquas molestiae tempore veniam&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 87,<br>        &quot;id&quot;: 435,<br>        &quot;name&quot;: &quot;id voluptatum nulla maiores ipsa eos&quot;,<br>        &quot;email&quot;: &quot;Susan.Bartell@euna.org&quot;,<br>        &quot;body&quot;: &quot;reprehenderit molestias sit nemo quas culpa dolorem exercitationem\neos est voluptatem dolores est fugiat dolorem\neos aut quia et amet et beatae harum vitae\nofficia quia animi dicta magnam accusantium&quot;<br>    }<br>]</pre>
+                                        <h4>Response Cookies</h4>
+                                        <pre>__cfduid=d0dd44dd2641bc8e1075cda43e734a50b1610013769;Path=/;Domain=.typicode.com;HttpOnly;Expires=2/6/21, 10:02 AM</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        </span>
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">0s</span></td>
+                    </tr>
+                    <tr class="test-SUCCESS">
+
+                        <td width="70" class="step-icon">
+                            <a name="0-9"></a>
+                                <span style="margin-left: 40px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                GET https://jsonplaceholder.typicode.com/comments?postId=88
+                                        </span>
+                                <span class="evidence">
+                                        <span class="piece-of-evidence">
+                    <span>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                                data-target="#restModal-REST-11">
+                            REST Query
+                        </button>
+                    </span>
+                    <!-- Modal -->
+                    <div class="rest-query-details">
+                        <div class="collapse multi-collapse" id="restModal-REST-11">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4>Response</h4>
+                                        <p>Status code: 200</p>
+                                        <p>Content Type: null</p>
+                                        <h4>Request Headers</h4>
+                                        <pre>Accept=*/*</pre>
+                                        <h4>Content Body</h4>
+                                        <pre></pre>
+                                        <h4>Request Cookies</h4>
+                                        <pre></pre>
+                                        <h4>Response Headers</h4>
+                                        <pre>Date: Thu, 07 Jan 2021 10:02:49 GMT<br>Content-Type: application/json; charset=utf-8<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>Set-Cookie: __cfduid=df4892484bb454c279e6759d0ed0b23581610013769; expires=Sat, 06-Feb-21 10:02:49 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax<br>X-Powered-By: Express<br>X-Ratelimit-Limit: 1000<br>X-Ratelimit-Remaining: 992<br>X-Ratelimit-Reset: 1609966178<br>Vary: Origin, Accept-Encoding<br>Access-Control-Allow-Credentials: true<br>Cache-Control: max-age=43200<br>Pragma: no-cache<br>Expires: -1<br>X-Content-Type-Options: nosniff<br>Etag: W/&quot;6a2-oppJ2op67qbdPnVHmA1XUau7mFE&quot;<br>Content-Encoding: gzip<br>Via: 1.1 vegur<br>CF-Cache-Status: HIT<br>Age: 18605<br>cf-request-id: 077de5976f00004a556c87f000000001<br>Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;<br>Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report?s=kOit9J0AsWJqyj3c3xL8ZK0CB6NSKXd6XiyqeN1sZaL%2F8XiBfch8jaiPixM5mRjrESjwh1aXhW0mbsK4tfBiZwJT5OGfGpgSXIYMs2%2B%2BdNo%2FVz0%2FTiD4xpF2Pbov&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>NEL: {&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>Server: cloudflare<br>CF-RAY: 60dcd86be8194a55-FRA</pre>
+                                    <h4>Response Body</h4>
+                                        <pre>[<br>    {<br>        &quot;postId&quot;: 88,<br>        &quot;id&quot;: 436,<br>        &quot;name&quot;: &quot;ea illo ab et maiores eaque non nobis&quot;,<br>        &quot;email&quot;: &quot;Selena.Quigley@johan.co.uk&quot;,<br>        &quot;body&quot;: &quot;sit non facilis commodi sapiente officiis aut facere libero\nsed voluptatum eligendi veniam velit explicabo\nsint laborum sunt reprehenderit dolore id nobis accusamus\nfugit voluptatem magni dolor qui dolores ipsa&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 88,<br>        &quot;id&quot;: 437,<br>        &quot;name&quot;: &quot;magni asperiores in cupiditate&quot;,<br>        &quot;email&quot;: &quot;Clifton_Boehm@jacynthe.io&quot;,<br>        &quot;body&quot;: &quot;suscipit ab qui eos et commodi\nquas ad maiores repellat laboriosam voluptatem exercitationem\nquibusdam ullam ratione nulla\nquia iste error dolorem consequatur beatae temporibus fugit&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 88,<br>        &quot;id&quot;: 438,<br>        &quot;name&quot;: &quot;ullam autem aliquam&quot;,<br>        &quot;email&quot;: &quot;Lizzie_Bartell@diamond.net&quot;,<br>        &quot;body&quot;: &quot;voluptas aspernatur eveniet\nquod id numquam dolores quia perspiciatis eum\net delectus quia occaecati adipisci nihil velit accusamus esse\nminus aspernatur repudiandae&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 88,<br>        &quot;id&quot;: 439,<br>        &quot;name&quot;: &quot;voluptates quasi minus dolorem itaque nemo&quot;,<br>        &quot;email&quot;: &quot;Yasmeen@golda.ca&quot;,<br>        &quot;body&quot;: &quot;cupiditate laborum sit reprehenderit ratione est ad\ncorporis rem pariatur enim et omnis dicta\nnobis molestias quo corporis et nihil\nsed et impedit aut quisquam natus expedita voluptate at&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 88,<br>        &quot;id&quot;: 440,<br>        &quot;name&quot;: &quot;adipisci sapiente libero beatae quas eveniet&quot;,<br>        &quot;email&quot;: &quot;Adolf.Russel@clark.ca&quot;,<br>        &quot;body&quot;: &quot;ut nam ut asperiores quis\nexercitationem aspernatur eligendi autem repellendus\nest repudiandae quisquam rerum ad explicabo suscipit deserunt eius\nalias aliquid eos pariatur rerum magnam provident iusto&quot;<br>    }<br>]</pre>
+                                        <h4>Response Cookies</h4>
+                                        <pre>__cfduid=df4892484bb454c279e6759d0ed0b23581610013769;Path=/;Domain=.typicode.com;HttpOnly;Expires=2/6/21, 10:02 AM</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        </span>
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">0s</span></td>
+                    </tr>
+                    <tr class="test-SUCCESS">
+
+                        <td width="70" class="step-icon">
+                            <a name="0-10"></a>
+                                <span style="margin-left: 40px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                GET https://jsonplaceholder.typicode.com/comments?postId=89
+                                        </span>
+                                <span class="evidence">
+                                        <span class="piece-of-evidence">
+                    <span>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                                data-target="#restModal-REST-12">
+                            REST Query
+                        </button>
+                    </span>
+                    <!-- Modal -->
+                    <div class="rest-query-details">
+                        <div class="collapse multi-collapse" id="restModal-REST-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4>Response</h4>
+                                        <p>Status code: 200</p>
+                                        <p>Content Type: null</p>
+                                        <h4>Request Headers</h4>
+                                        <pre>Accept=*/*</pre>
+                                        <h4>Content Body</h4>
+                                        <pre></pre>
+                                        <h4>Request Cookies</h4>
+                                        <pre></pre>
+                                        <h4>Response Headers</h4>
+                                        <pre>Date: Thu, 07 Jan 2021 10:02:49 GMT<br>Content-Type: application/json; charset=utf-8<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>Set-Cookie: __cfduid=d822f07d4f461f06902497e48b89a840f1610013769; expires=Sat, 06-Feb-21 10:02:49 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax<br>X-Powered-By: Express<br>X-Ratelimit-Limit: 1000<br>X-Ratelimit-Remaining: 991<br>X-Ratelimit-Reset: 1609966178<br>Vary: Origin, Accept-Encoding<br>Access-Control-Allow-Credentials: true<br>Cache-Control: max-age=43200<br>Pragma: no-cache<br>Expires: -1<br>X-Content-Type-Options: nosniff<br>Etag: W/&quot;60c-wrJUV2/bf0vkVCbTHq9mEpHpMNs&quot;<br>Content-Encoding: gzip<br>Via: 1.1 vegur<br>CF-Cache-Status: HIT<br>Age: 18604<br>cf-request-id: 077de5981d000005f1ff252000000001<br>Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;<br>Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report?s=iBWZ9%2Bg1MZaGTp5cQYXsuC52HRxhcaPakU7fqArAtP%2FRj6%2FTjhAl9YxasVzKlRPpF%2BboZFKfWcus3iDSIBeAZAFr3mjPilqb8DcYAfO%2BZdQFskB8dRhxxYKFkP%2FU&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>NEL: {&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>Server: cloudflare<br>CF-RAY: 60dcd86cff6705f1-FRA</pre>
+                                    <h4>Response Body</h4>
+                                        <pre>[<br>    {<br>        &quot;postId&quot;: 89,<br>        &quot;id&quot;: 441,<br>        &quot;name&quot;: &quot;nisi qui voluptates recusandae voluptas assumenda et&quot;,<br>        &quot;email&quot;: &quot;Elian@matilda.me&quot;,<br>        &quot;body&quot;: &quot;illum qui quis optio\nquasi eius dolores et non numquam et\nqui necessitatibus itaque magnam mollitia earum et\nnisi voluptate eum accusamus ea&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 89,<br>        &quot;id&quot;: 442,<br>        &quot;name&quot;: &quot;sed molestias sit voluptatibus sit aut alias sunt inventore&quot;,<br>        &quot;email&quot;: &quot;Salma@francis.net&quot;,<br>        &quot;body&quot;: &quot;velit ut incidunt accusantium\nsuscipit animi officia iusto\nnemo omnis sunt nobis repellendus corporis\nconsequatur distinctio dolorem&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 89,<br>        &quot;id&quot;: 443,<br>        &quot;name&quot;: &quot;illum pariatur aliquam esse nisi voluptas quisquam ea&quot;,<br>        &quot;email&quot;: &quot;Orlando_Dickinson@vern.org&quot;,<br>        &quot;body&quot;: &quot;reiciendis et distinctio qui totam non aperiam voluptas\nveniam in dolorem pariatur itaque\nvoluptas adipisci velit\nqui voluptates voluptas ut ullam veritatis repudiandae&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 89,<br>        &quot;id&quot;: 444,<br>        &quot;name&quot;: &quot;incidunt aut qui quis est sit corporis pariatur qui&quot;,<br>        &quot;email&quot;: &quot;Elda@orval.name&quot;,<br>        &quot;body&quot;: &quot;eligendi labore aut non modi vel facere qui\naccusamus qui maxime aperiam\ntotam et non ut repudiandae eum corrupti pariatur quia\nnecessitatibus et adipisci ipsa consequuntur enim et nihil vero&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 89,<br>        &quot;id&quot;: 445,<br>        &quot;name&quot;: &quot;temporibus adipisci eveniet libero ullam&quot;,<br>        &quot;email&quot;: &quot;Dennis@karley.net&quot;,<br>        &quot;body&quot;: &quot;est consequuntur cumque\nquo dolorem at ut dolores\nconsequatur quia voluptates reiciendis\nvel rerum id et&quot;<br>    }<br>]</pre>
+                                        <h4>Response Cookies</h4>
+                                        <pre>__cfduid=d822f07d4f461f06902497e48b89a840f1610013769;Path=/;Domain=.typicode.com;HttpOnly;Expires=2/6/21, 10:02 AM</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        </span>
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">0s</span></td>
+                    </tr>
+                    <tr class="test-SUCCESS">
+
+                        <td width="70" class="step-icon">
+                            <a name="0-11"></a>
+                                <span style="margin-left: 40px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                GET https://jsonplaceholder.typicode.com/comments?postId=90
+                                        </span>
+                                <span class="evidence">
+                                        <span class="piece-of-evidence">
+                    <span>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                                data-target="#restModal-REST-13">
+                            REST Query
+                        </button>
+                    </span>
+                    <!-- Modal -->
+                    <div class="rest-query-details">
+                        <div class="collapse multi-collapse" id="restModal-REST-13">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4>Response</h4>
+                                        <p>Status code: 200</p>
+                                        <p>Content Type: null</p>
+                                        <h4>Request Headers</h4>
+                                        <pre>Accept=*/*</pre>
+                                        <h4>Content Body</h4>
+                                        <pre></pre>
+                                        <h4>Request Cookies</h4>
+                                        <pre></pre>
+                                        <h4>Response Headers</h4>
+                                        <pre>Date: Thu, 07 Jan 2021 10:02:49 GMT<br>Content-Type: application/json; charset=utf-8<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>Set-Cookie: __cfduid=d078a43dca871e982e8a86d6d8cd8be221610013769; expires=Sat, 06-Feb-21 10:02:49 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax<br>X-Powered-By: Express<br>X-Ratelimit-Limit: 1000<br>X-Ratelimit-Remaining: 990<br>X-Ratelimit-Reset: 1609966178<br>Vary: Origin, Accept-Encoding<br>Access-Control-Allow-Credentials: true<br>Cache-Control: max-age=43200<br>Pragma: no-cache<br>Expires: -1<br>X-Content-Type-Options: nosniff<br>Etag: W/&quot;5b3-3ojnkVRQdueL3gLpOkCuHlvpaKw&quot;<br>Content-Encoding: gzip<br>Via: 1.1 vegur<br>CF-Cache-Status: HIT<br>Age: 18604<br>cf-request-id: 077de598ba0000d70d1828c000000001<br>Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;<br>Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report?s=mjMNOc8HmRg8W0D9AXa0QddCdFm9IFW0GZchX0Txs0lOb6t2u9D1gf6NifVXosxLHt%2FxBXU1KKLQsIiaeI6PME9z1ZdiVXGCYhTkNpNDf%2B9deZrUzZL6a6YbJURE&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>NEL: {&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>Server: cloudflare<br>CF-RAY: 60dcd86dee4ed70d-FRA</pre>
+                                    <h4>Response Body</h4>
+                                        <pre>[<br>    {<br>        &quot;postId&quot;: 90,<br>        &quot;id&quot;: 446,<br>        &quot;name&quot;: &quot;dicta excepturi aut est dolor ab dolores rerum&quot;,<br>        &quot;email&quot;: &quot;Jedediah@mason.io&quot;,<br>        &quot;body&quot;: &quot;cum fugit earum vel et nulla et voluptatem\net ipsam aut\net nihil officia nemo eveniet accusamus\nnulla aut impedit veritatis praesentium&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 90,<br>        &quot;id&quot;: 447,<br>        &quot;name&quot;: &quot;molestiae qui quod quo&quot;,<br>        &quot;email&quot;: &quot;Maryam@jack.name&quot;,<br>        &quot;body&quot;: &quot;rerum omnis voluptatem harum aliquid voluptas accusamus\neius dicta animi\nodio non quidem voluptas tenetur\nnostrum deserunt laudantium culpa dolorum&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 90,<br>        &quot;id&quot;: 448,<br>        &quot;name&quot;: &quot;pariatur consequatur sit commodi aliquam&quot;,<br>        &quot;email&quot;: &quot;Rick@carlos.tv&quot;,<br>        &quot;body&quot;: &quot;odio maxime beatae ab labore rerum\nalias ipsa nam est nostrum\net debitis aut\nab molestias assumenda eaque repudiandae&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 90,<br>        &quot;id&quot;: 449,<br>        &quot;name&quot;: &quot;sunt quia soluta quae sit deleniti dolor ullam veniam&quot;,<br>        &quot;email&quot;: &quot;Vallie@jerrod.net&quot;,<br>        &quot;body&quot;: &quot;dolor at accusantium eveniet\nin voluptatem quam et fugiat et quasi dolores\nsunt eligendi voluptatum id voluptas vitae\nquibusdam iure eum perspiciatis&quot;<br>    },<br>    {<br>        &quot;postId&quot;: 90,<br>        &quot;id&quot;: 450,<br>        &quot;name&quot;: &quot;dolorem corporis facilis et&quot;,<br>        &quot;email&quot;: &quot;Adolph.Hayes@isobel.biz&quot;,<br>        &quot;body&quot;: &quot;et provident quo necessitatibus harum excepturi\nsed est ut sed est doloremque labore quod\nquia optio explicabo adipisci magnam doloribus\nveritatis illo aut est inventore&quot;<br>    }<br>]</pre>
+                                        <h4>Response Cookies</h4>
+                                        <pre>__cfduid=d078a43dca871e982e8a86d6d8cd8be221610013769;Path=/;Domain=.typicode.com;HttpOnly;Expires=2/6/21, 10:02 AM</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        </span>
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">0s</span></td>
+                    </tr>
+
+                                </table>
+                            </td>
+                        </tr>
+                <tr class="test-SUCCESS">
+                        <td colspan="2"></td>
+                    <td width="130"><span class="top-level-step"><em>SUCCESS</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>0.01s</em></span></td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+
+    <div id="beforefooter"></div>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <span class="version">Serenity BDD version 2.3.2</span>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function toggleDiv(divId) {
+            $("#" + divId).toggle();
+            var imgsrc = $(".img" + divId).attr('src');
+            if (imgsrc == 'images/plus.png') {
+                $(".img" + divId).attr("src", function () {
+                    return "images/minus.png";
+                });
+
+            } else {
+                $(".img" + divId).attr("src", function () {
+                    return "images/plus.png";
+                });
+            }
+        }
+    </script>
+
+
+    <script type="text/javascript">
+        //<![CDATA[
+
+        $(document).ready(function () {
+            $('img.screenshot').imgPreview({
+                imgCSS: {
+                    width: '500px'
+                },
+                distanceFromCursor: {top: 10, left: -200}
+            });
+        });
+
+        //]]>
+    </script>
+    <div id="imgPreviewContainer" style="position: absolute; top: 612px; left: 355px; display: none; " class=""><img
+                src="" style="display: none; "></div>
+    <div id="imgPreviewContainer2" style="position: absolute; top: 925px; left: 320px; display: none; " class="">
+        <img style="width: 200px; display: none; " src=""></div>
+    <div id="imgPreviewWithStyles" style="position: absolute; top: 1272px; left: 321px; display: none; " class="">
+        <img style="height: 200px; opacity: 1; display: none; " src=""></div>
+    <div id="imgPreviewWithStyles2" style="display: none; position: absolute; "><img style="height: 200px; "></div>
+    <div id="imgPreviewWithStyles3" style="display: none; position: absolute; "><img style="height: 200px; "></div>
+
+</div>
+</body>
+</html>

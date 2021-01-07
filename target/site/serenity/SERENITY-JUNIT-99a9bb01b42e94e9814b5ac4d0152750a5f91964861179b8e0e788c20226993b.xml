@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="com.api.testing.junit.commentsDetails.GetCommentsTest" skipped="0" tests="1" time="0.01" timestamp="2021-01-07 11:02:51"><testcase classname="com.api.testing.junit.commentsDetails.GetCommentsTest" name="This is to validate the format of all emails for each comment"/></testsuite>

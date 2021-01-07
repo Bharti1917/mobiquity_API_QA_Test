@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: com.api.testing.junit.usersdetails.GetUsersTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.1 sec <<< FAILURE! - in com.api.testing.junit.usersdetails.GetUsersTest
+verifyIftheStatusCodeIsNot200[0](com.api.testing.junit.usersdetails.GetUsersTest)  Time elapsed: 1.023 sec  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at com.api.testing.junit.usersdetails.GetUsersTest.verifyIftheStatusCodeIsNot200(GetUsersTest.java:58)
+

@@ -1,0 +1,10 @@
+com\api\testing\cucumber\serenity\PostsSerenitySteps.class
+com\api\testing\testbase\TestBase.class
+com\api\testing\junit\postsdetails\GetPostsTest.class
+com\api\testing\junit\usersdetails\GetUsersTest.class
+com\api\testing\utils\ReusableSpecifications.class
+com\api\testing\cucumber\TestRunner.class
+com\api\testing\junit\commentsDetails\GetCommentsTest.class
+com\api\testing\utils\TestUtils.class
+com\api\testing\cucumber\serenity\UserSerenitySteps.class
+com\api\testing\cucumber\serenity\CommentsSerenity.class

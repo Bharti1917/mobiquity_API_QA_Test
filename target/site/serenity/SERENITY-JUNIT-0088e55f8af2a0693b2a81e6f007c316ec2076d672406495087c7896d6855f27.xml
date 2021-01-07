@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="com.api.testing.junit.usersdetails.GetUsersTest" skipped="0" tests="4" time="1.93" timestamp="2021-01-07 11:03:05"><testcase classname="com.api.testing.junit.usersdetails.GetUsersTest" name="This will validate the response code  500 of get users API"><failure message="1 expectation failed.&#10;Expected status code &lt;500&gt; but was &lt;200&gt;.&#10;" type="java.lang.AssertionError">1 expectation failed.
+Expected status code &lt;500&gt; but was &lt;200&gt;.
+</failure><system-err>1 expectation failed.
+Expected status code &lt;500&gt; but was &lt;200&gt;.
+&#13;
+io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:656)&#13;
+io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:125)&#13;
+io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:133)&#13;
+io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:119)&#13;
+com.api.testing.junit.usersdetails.GetUsersTest.verifyIftheStatusCodeIsNot200(GetUsersTest.java:58)&#13;
+</system-err></testcase><testcase classname="com.api.testing.junit.usersdetails.GetUsersTest" name="This will validate the username of get users api response as per the requirement"/><testcase classname="com.api.testing.junit.usersdetails.GetUsersTest" name="This will validate the response code 200 of get users API"/><testcase classname="com.api.testing.junit.usersdetails.GetUsersTest" name="This will validate that user id value is not null"/></testsuite>

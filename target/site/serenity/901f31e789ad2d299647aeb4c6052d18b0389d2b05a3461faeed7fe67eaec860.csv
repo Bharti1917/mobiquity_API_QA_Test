@@ -1,0 +1,3 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Get users test","This will validate the username of get users api response as per the requirement","SUCCESS","2021-01-07T11:03:06.1180167+01:00[Europe/Berlin]","0.0","0.0"
+"Get users test","This will validate that user id value is not null","SUCCESS","2021-01-07T11:03:07.4120233+01:00[Europe/Berlin]","0.0","0.89"

@@ -1,0 +1,2 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Get users test","This will validate the response code  500 of get users API","FAILURE","2021-01-07T11:03:05.4037923+01:00[Europe/Berlin]","0.0","1.04"
