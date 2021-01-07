@@ -40,7 +40,4 @@ jobs:
       # run tests!
       - run: mvn test
 
-      test:
-    override:
-    - mkdir -p $CIRCLE_TEST_REPORTS/serenity
-    - bundle exec cucumber --format junit --out $CIRCLE_TEST_REPORTS/serenity/junit.xml
+    
